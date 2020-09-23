@@ -78,3 +78,6 @@ H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\ne
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\ksp.blog.web.csproj.CopyComplete
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\staticwebassets\ksp.blog.web.StaticWebAssets.Manifest.cache
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\staticwebassets\ksp.blog.web.StaticWebAssets.xml
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\ksp.blog.web.csproj.CoreCompileInputs.cache
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\ksp.blog.web.MvcApplicationPartsAssemblyInfo.cs
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\ksp.blog.web.MvcApplicationPartsAssemblyInfo.cache

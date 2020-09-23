@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "vWyw4eTh/Ue0/yri0q9NYXfJqKH9Fl8k2cTHESuowFGzGCXcmQ3gE1SVaJLvUF0TrrZxHJzFiyGke53Dzu3pCQ==",
+  "dgSpecHash": "IRydQoeCbaOoApRB9kWYcRcYqXqIRllwywdo3BUnmsXTCjdZarBW6nZpqLuOqfZklnd/Ux+M5vcdKq6+1oo9WA==",
   "success": true,
   "projectFilePath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.framework\\ksp.blog.framework.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
+    "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
