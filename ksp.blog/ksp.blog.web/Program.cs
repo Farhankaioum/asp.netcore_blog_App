@@ -15,6 +15,13 @@ namespace ksp.blog.web
     {
         public static async Task Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                        .MinimumLevel.Debug()
+                        .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+                        .Enrich.FromLogContext()
+                        .WriteTo.RollingFile("Logs//blog-log-{Date}.log")
+                        .CreateLogger();
+
             var host = CreateHostBuilder(args).Build();
             using (var scope = host.Services.CreateScope())
             {
@@ -32,16 +39,9 @@ namespace ksp.blog.web
                     Log.Fatal(ex, "An error occurred seeding the DB."); 
                 }
             }
-
-                Log.Logger = new LoggerConfiguration()
-                        .MinimumLevel.Debug()
-                        .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
-                        .Enrich.FromLogContext()
-                        .WriteTo.RollingFile("Logs//blog-log-{Date}.log")
-                        .CreateLogger();
+                
             try
             {
-
                 Log.Information("Application Starting up");
                 CreateHostBuilder(args).Build().Run();
 
@@ -53,6 +53,7 @@ namespace ksp.blog.web
             finally
             {
                 Log.CloseAndFlush();
+                host.Run();
             }
 
         }
