@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ksp.blog.web", "ksp.blog.web\ksp.blog.web.csproj", "{9F0FB67E-9BE5-4551-B987-DC9EC2B16B55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ksp.blog.framework", "ksp.blog.framework\ksp.blog.framework.csproj", "{ACE3F4D6-88DA-44E3-840B-61417A67DDFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9F0FB67E-9BE5-4551-B987-DC9EC2B16B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F0FB67E-9BE5-4551-B987-DC9EC2B16B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F0FB67E-9BE5-4551-B987-DC9EC2B16B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE3F4D6-88DA-44E3-840B-61417A67DDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE3F4D6-88DA-44E3-840B-61417A67DDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE3F4D6-88DA-44E3-840B-61417A67DDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE3F4D6-88DA-44E3-840B-61417A67DDFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
