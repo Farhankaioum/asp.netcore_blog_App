@@ -16,10 +16,10 @@ namespace ksp.blog.framework
         protected override void Load(ContainerBuilder builder)
         {
 
-            //builder.RegisterType<FrameworkContext>()
-            //    .WithParameter("connectionString", _connectionString)
-            //    .WithParameter("migrationAssemblyName", _migrationAssemblyName)
-            //    .InstancePerLifetimeScope();
+            builder.RegisterType<FrameworkContext>()
+                .WithParameter("connectionString", _connectionString)
+                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
 
             base.Load(builder);
         }
