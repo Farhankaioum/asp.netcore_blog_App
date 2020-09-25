@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Autofac.Extensions.DependencyInjection;
 using ksp.blog.membership.Contexts;
+using ksp.blog.membership.Entities;
 using ksp.blog.web.Seeder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -29,8 +30,8 @@ namespace ksp.blog.web
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
-                    var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
-                    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                    var roleManager = services.GetRequiredService<RoleManager<Role>>();
                     await ContextSeed.SeedRolesAsync(userManager, roleManager);
                     await ContextSeed.SeedSuperAdminAsync(userManager, roleManager);
                 }

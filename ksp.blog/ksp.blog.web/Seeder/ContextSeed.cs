@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ksp.blog.membership.Entities;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,19 +16,19 @@ namespace ksp.blog.web.Seeder
     }
     public static class ContextSeed
     {
-        public static async Task SeedRolesAsync(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task SeedRolesAsync(UserManager<ApplicationUser> userManager, RoleManager<Role> roleManager)
         {
             // seed roles
-            await roleManager.CreateAsync(new IdentityRole(Roles.SuperAdmin.ToString()));
-            await roleManager.CreateAsync(new IdentityRole(Roles.Admin.ToString()));
-            await roleManager.CreateAsync(new IdentityRole(Roles.Moderator.ToString()));
-            await roleManager.CreateAsync(new IdentityRole(Roles.Basic.ToString()));
+            await roleManager.CreateAsync(new Role(Roles.SuperAdmin.ToString()));
+            await roleManager.CreateAsync(new Role(Roles.Admin.ToString()));
+            await roleManager.CreateAsync(new Role(Roles.Moderator.ToString()));
+            await roleManager.CreateAsync(new Role(Roles.Basic.ToString()));
         }
 
-        public static async Task SeedSuperAdminAsync(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task SeedSuperAdminAsync(UserManager<ApplicationUser> userManager, RoleManager<Role> roleManager)
         {
             // Seed Default User
-            var defaultUser1 = new IdentityUser
+            var defaultUser1 = new ApplicationUser
             {
                 UserName = "superadmin",
                 Email = "superadmin@gmail.com",
@@ -35,7 +36,7 @@ namespace ksp.blog.web.Seeder
                 PhoneNumberConfirmed = true
             };
 
-            var defaultUser2 = new IdentityUser
+            var defaultUser2 = new ApplicationUser
             {
                 UserName = "admin",
                 Email = "admin@gmail.com",

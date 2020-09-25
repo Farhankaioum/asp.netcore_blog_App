@@ -46,8 +46,6 @@ namespace ksp.blog.web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            
-
             var connectionStringName = "DefaultConnection";
             var connectionString = Configuration.GetConnectionString(connectionStringName);
             var migrationAssemblyName = typeof(Startup).Assembly.FullName;
@@ -65,6 +63,7 @@ namespace ksp.blog.web
              .AddEntityFrameworkStores<ApplicationDbContext>()
              .AddDefaultUI()
              .AddDefaultTokenProviders();
+
 
             services.AddControllersWithViews();
             services.AddRazorPages();
