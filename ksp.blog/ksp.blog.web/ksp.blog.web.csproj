@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ksp.blog.framework\ksp.blog.framework.csproj" />
+    <ProjectReference Include="..\ksp.blog.membership\ksp.blog.membership.csproj" />
   </ItemGroup>
 
   <ItemGroup>

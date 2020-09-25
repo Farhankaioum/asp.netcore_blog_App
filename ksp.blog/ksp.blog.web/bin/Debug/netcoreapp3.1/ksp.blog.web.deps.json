@@ -35,6 +35,7 @@
           "Serilog.AspNetCore": "3.4.0",
           "Serilog.Sinks.RollingFile": "3.3.0",
           "ksp.blog.framework": "1.0.0",
+          "ksp.blog.membership": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2617,6 +2618,19 @@
         },
         "compile": {
           "ksp.blog.framework.dll": {}
+        }
+      },
+      "ksp.blog.membership/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.7",
+          "Microsoft.AspNetCore.Identity.UI": "3.1.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.7"
+        },
+        "runtime": {
+          "ksp.blog.membership.dll": {}
+        },
+        "compile": {
+          "ksp.blog.membership.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5501,6 +5515,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "ksp.blog.framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ksp.blog.membership/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -2984,6 +2984,24 @@
         "runtime": {
           "bin/placeholder/ksp.blog.framework.dll": {}
         }
+      },
+      "ksp.blog.membership/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.5",
+          "Microsoft.AspNetCore.Identity.UI": "3.1.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5"
+        },
+        "compile": {
+          "bin/placeholder/ksp.blog.membership.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ksp.blog.membership.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -9444,6 +9462,11 @@
       "type": "project",
       "path": "../ksp.blog.framework/ksp.blog.framework.csproj",
       "msbuildProject": "../ksp.blog.framework/ksp.blog.framework.csproj"
+    },
+    "ksp.blog.membership/1.0.0": {
+      "type": "project",
+      "path": "../ksp.blog.membership/ksp.blog.membership.csproj",
+      "msbuildProject": "../ksp.blog.membership/ksp.blog.membership.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9458,7 +9481,8 @@
       "Serilog >= 2.10.0",
       "Serilog.AspNetCore >= 3.4.0",
       "Serilog.Sinks.RollingFile >= 3.3.0",
-      "ksp.blog.framework >= 1.0.0"
+      "ksp.blog.framework >= 1.0.0",
+      "ksp.blog.membership >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9489,6 +9513,9 @@
           "projectReferences": {
             "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.framework\\ksp.blog.framework.csproj": {
               "projectPath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.framework\\ksp.blog.framework.csproj"
+            },
+            "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.membership\\ksp.blog.membership.csproj": {
+              "projectPath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.membership\\ksp.blog.membership.csproj"
             }
           }
         }

@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Autofac.Extensions.DependencyInjection;
-using ksp.blog.web.Data;
+using ksp.blog.membership.Contexts;
 using ksp.blog.web.Seeder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
