@@ -10,6 +10,7 @@ using Autofac.Extensions.DependencyInjection;
 using ksp.blog.framework;
 using ksp.blog.membership.Contexts;
 using ksp.blog.membership.Entities;
+using ksp.blog.membership;
 
 namespace ksp.blog.web
 {
@@ -38,6 +39,7 @@ namespace ksp.blog.web
 
 
             builder.RegisterModule(new FrameworkModule(connectionString, migrationAssemblyName));
+            builder.RegisterModule(new MembershipModule(connectionString, migrationAssemblyName));
             //builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
 
         }

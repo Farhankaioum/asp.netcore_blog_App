@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0H+561R1ZLkBdME4EGK+j/LhfqwYLBthZwwyIbC9IqXG6a6B25mif3UhPxqV9pjFXTsfnuO1rWfHGMQ4qsQRRQ==",
+  "dgSpecHash": "J1HgZgxfLiOyz5v5vKIm202rlg6yVuNOpMIBL2Xsa/boFiL2oy0wIFQDAulL56M9A2edCJ4k6dmb4Q9Vhx/lCw==",
   "success": true,
   "projectFilePath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.membership\\ksp.blog.membership.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
+    "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.5\\microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.5\\microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.5\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.5.nupkg.sha512",

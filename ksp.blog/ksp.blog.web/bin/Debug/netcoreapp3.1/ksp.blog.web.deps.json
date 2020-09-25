@@ -2619,6 +2619,7 @@
       },
       "ksp.blog.membership/1.0.0": {
         "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.8",
           "Microsoft.AspNetCore.Identity.UI": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"

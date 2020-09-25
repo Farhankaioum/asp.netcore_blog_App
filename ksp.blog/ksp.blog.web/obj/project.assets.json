@@ -2989,6 +2989,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.5",
           "Microsoft.AspNetCore.Identity.UI": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5"
