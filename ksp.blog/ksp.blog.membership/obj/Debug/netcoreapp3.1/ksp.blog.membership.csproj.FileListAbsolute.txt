@@ -1,0 +1,9 @@
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\bin\Debug\netcoreapp3.1\ksp.blog.membership.deps.json
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\bin\Debug\netcoreapp3.1\ksp.blog.membership.dll
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\bin\Debug\netcoreapp3.1\ksp.blog.membership.pdb
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\obj\Debug\netcoreapp3.1\ksp.blog.membership.csprojAssemblyReference.cache
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\obj\Debug\netcoreapp3.1\ksp.blog.membership.AssemblyInfoInputs.cache
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\obj\Debug\netcoreapp3.1\ksp.blog.membership.AssemblyInfo.cs
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\obj\Debug\netcoreapp3.1\ksp.blog.membership.csproj.CoreCompileInputs.cache
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\obj\Debug\netcoreapp3.1\ksp.blog.membership.dll
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.membership\obj\Debug\netcoreapp3.1\ksp.blog.membership.pdb

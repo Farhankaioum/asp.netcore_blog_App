@@ -1,5 +1,9 @@
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\bin\Debug\netcoreapp3.1\ksp.blog.data.deps.json
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\bin\Debug\netcoreapp3.1\ksp.blog.data.dll
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\bin\Debug\netcoreapp3.1\ksp.blog.data.pdb
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\obj\Debug\netcoreapp3.1\ksp.blog.data.csprojAssemblyReference.cache
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\obj\Debug\netcoreapp3.1\ksp.blog.data.AssemblyInfoInputs.cache
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\obj\Debug\netcoreapp3.1\ksp.blog.data.AssemblyInfo.cs
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\obj\Debug\netcoreapp3.1\ksp.blog.data.csproj.CoreCompileInputs.cache
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\obj\Debug\netcoreapp3.1\ksp.blog.data.dll
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.data\obj\Debug\netcoreapp3.1\ksp.blog.data.pdb
