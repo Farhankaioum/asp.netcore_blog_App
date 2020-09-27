@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using ksp.blog.membership.Entities;
+using ksp.blog.membership.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,7 +14,7 @@ namespace ksp.blog.web.Areas.Identity.Pages.Account.Manage
         private readonly ILogger<PersonalDataModel> _logger;
 
         public PersonalDataModel(
-            UserManager<ApplicationUser> userManager,
+            UserManager userManager,
             ILogger<PersonalDataModel> logger)
         {
             _userManager = userManager;

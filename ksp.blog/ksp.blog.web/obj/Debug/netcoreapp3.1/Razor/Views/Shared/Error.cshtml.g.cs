@@ -21,20 +21,27 @@ using ksp.blog.membership.Entities;
 #nullable disable
 #nullable restore
 #line 2 "H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\Views\_ViewImports.cshtml"
-using ksp.blog.web;
+using ksp.blog.membership.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\Views\_ViewImports.cshtml"
+using ksp.blog.web;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\Views\_ViewImports.cshtml"
 using ksp.blog.web.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d0b387df94749c3b06464b5aff6985bf2016855d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"00ff304cc76cc8f93988dc25bfd28e9d47809b06", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ksp.blog.web.Models;
 using ksp.blog.framework;
+using ksp.blog.membership.Services;
 
 namespace ksp.blog.web.Controllers
 {
@@ -14,7 +15,7 @@ namespace ksp.blog.web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-       public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }

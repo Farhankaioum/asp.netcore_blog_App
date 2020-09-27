@@ -1,11 +1,12 @@
 ﻿using ksp.blog.membership.Entities;
+using System;
 
 namespace ksp.blog.membership
 {
-    public interface IMembershipService
+    public interface IMembershipService : IDisposable
     {
-        int Registration(ApplicationUser applicationUser);
-        int Login(string userName, string password, bool rememberMe);
+        void Registration(RegistrationModel model);
+        void Login(string userName, string password);
         void LogOut();
         
     }

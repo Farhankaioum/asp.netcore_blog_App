@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using ksp.blog.membership.Entities;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using ksp.blog.membership.Services;
+using ksp.blog.membership.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace ksp.blog.web.Areas.Identity.Pages.Account
 {
@@ -18,7 +16,7 @@ namespace ksp.blog.web.Areas.Identity.Pages.Account
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public ResetPasswordModel(UserManager<ApplicationUser> userManager)
+        public ResetPasswordModel(UserManager userManager)
         {
             _userManager = userManager;
         }

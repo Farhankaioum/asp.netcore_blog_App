@@ -1,5 +1,5 @@
 ﻿using ksp.blog.membership.Entities;
-using Microsoft.AspNetCore.Identity;
+using ksp.blog.membership.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace ksp.blog.web.Seeder
     }
     public static class ContextSeed
     {
-        public static async Task SeedRolesAsync(UserManager<ApplicationUser> userManager, RoleManager<Role> roleManager)
+        public static async Task SeedRolesAsync(UserManager userManager, RoleManager roleManager)
         {
             // seed roles
             await roleManager.CreateAsync(new Role(Roles.SuperAdmin.ToString()));
@@ -25,7 +25,7 @@ namespace ksp.blog.web.Seeder
             await roleManager.CreateAsync(new Role(Roles.Basic.ToString()));
         }
 
-        public static async Task SeedSuperAdminAsync(UserManager<ApplicationUser> userManager, RoleManager<Role> roleManager)
+        public static async Task SeedSuperAdminAsync(UserManager userManager, RoleManager roleManager)
         {
             // Seed Default User
             var defaultUser1 = new ApplicationUser

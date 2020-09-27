@@ -1,5 +1,8 @@
 ﻿using Autofac;
 using ksp.blog.membership.Contexts;
+using ksp.blog.membership.Entities;
+using ksp.blog.membership.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace ksp.blog.membership
 {
@@ -30,6 +33,16 @@ namespace ksp.blog.membership
 
             builder.RegisterType<MembershipService>().As<IMembershipService>()
                 .InstancePerLifetimeScope();
+
+            //builder.RegisterType<UserManager>().As<UserManager<ApplicationUser>>()
+            //    .InstancePerLifetimeScope();
+
+            //builder.RegisterType<SignInManager>().As<SignInManager<ApplicationUser>>()
+            //    .InstancePerLifetimeScope();
+
+            //builder.RegisterType<RoleManager>().As<RoleManager<Role>>();
+
+
 
             base.Load(builder);
         }

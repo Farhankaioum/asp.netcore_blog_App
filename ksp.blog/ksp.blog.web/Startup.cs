@@ -11,6 +11,8 @@ using ksp.blog.framework;
 using ksp.blog.membership.Contexts;
 using ksp.blog.membership.Entities;
 using ksp.blog.membership;
+using ksp.blog.membership.Services;
+using System;
 
 namespace ksp.blog.web
 {
@@ -58,14 +60,37 @@ namespace ksp.blog.web
             services.AddDbContext<FrameworkContext>(options =>
                 options.UseSqlServer(connectionString, b => b.MigrationsAssembly(migrationAssemblyName)));
 
+
             services.AddIdentity<ApplicationUser, Role>(options =>
             {
-                options.SignIn.RequireConfirmedAccount = true;
             })
-             .AddEntityFrameworkStores<ApplicationDbContext>()
              .AddDefaultUI()
-             .AddDefaultTokenProviders();
+             .AddDefaultTokenProviders()
+             .AddEntityFrameworkStores<ApplicationDbContext>()
+             .AddUserManager<UserManager>()
+             .AddRoleManager<RoleManager>()
+             .AddSignInManager<SignInManager>();
 
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings.
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
+
+                // Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // User settings.
+                options.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
+            });
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -90,6 +115,7 @@ namespace ksp.blog.web
 
             app.UseRouting();
 
+            app.UseCookiePolicy();
             app.UseAuthentication();
             app.UseAuthorization();
 

@@ -1,20 +1,35 @@
 ﻿using ksp.blog.membership.Entities;
+using ksp.blog.membership.Services;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Net.WebSockets;
+using System.Threading.Tasks;
 
 namespace ksp.blog.membership
 {
-    public class MembershipService : IMembershipService
+    public class MembershipService : IMembershipService, IDisposable
     {
         private readonly IMembershipUnitOfWork _membershipUnitOfWork;
+        private readonly UserManager _userManager;
+        private readonly SignInManager signInManager;
 
-        public MembershipService(IMembershipUnitOfWork membershipUnitOfWork)
+        public MembershipService(IMembershipUnitOfWork membershipUnitOfWork, UserManager userManager, SignInManager signInManager)
         {
             _membershipUnitOfWork = membershipUnitOfWork;
+            _userManager = userManager;
+            this.signInManager = signInManager;
         }
 
-        public int Login(string userName, string password, bool rememberMe)
+        public MembershipService()
+        {
+
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Login(string userName, string password)
         {
             throw new NotImplementedException();
         }
@@ -24,9 +39,16 @@ namespace ksp.blog.membership
             throw new NotImplementedException();
         }
 
-        public int Registration(ApplicationUser applicationUser)
+        public void Registration(RegistrationModel model)
         {
-            throw new NotImplementedException();
+            var applicationUser = new ApplicationUser
+            {
+                UserName = model.Email,
+                Email = model.Email
+            };
+
+         _userManager.CreateAsync(applicationUser, model.Password);
+
         }
     }
 }
