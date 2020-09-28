@@ -34,13 +34,8 @@ namespace ksp.blog.membership
             builder.RegisterType<MembershipService>().As<IMembershipService>()
                 .InstancePerLifetimeScope();
 
-            //builder.RegisterType<UserManager>().As<UserManager<ApplicationUser>>()
-            //    .InstancePerLifetimeScope();
-
-            //builder.RegisterType<SignInManager>().As<SignInManager<ApplicationUser>>()
-            //    .InstancePerLifetimeScope();
-
-            //builder.RegisterType<RoleManager>().As<RoleManager<Role>>();
+            builder.RegisterType<MailService>().As<IMailService>()
+                .InstancePerLifetimeScope();
 
 
 

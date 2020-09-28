@@ -13,6 +13,7 @@ using ksp.blog.membership.Entities;
 using ksp.blog.membership;
 using ksp.blog.membership.Services;
 using System;
+using ksp.blog.membership.Settings;
 
 namespace ksp.blog.web
 {
@@ -91,6 +92,9 @@ namespace ksp.blog.web
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
             });
+
+            // for binding configure mailsetting class to mailsetting blog in appsettings.json file
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
 
             services.AddControllersWithViews();
             services.AddRazorPages();

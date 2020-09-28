@@ -108,6 +108,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -119,6 +123,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
             }
           },
           "imports": [
