@@ -1,0 +1,82 @@
+2020-09-28 12:01:21.932 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:21.988 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:21.990 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:21.991 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:22.107 -07:00 [Information] Application Starting up
+2020-09-28 12:01:54.793 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:54.831 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:54.833 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:54.834 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:01:54.906 -07:00 [Information] Application Starting up
+2020-09-28 12:02:19.828 -07:00 [Information] User logged in.
+2020-09-28 12:03:00.029 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:00.073 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:00.076 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:00.077 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:00.148 -07:00 [Information] Application Starting up
+2020-09-28 12:03:00.536 -07:00 [Information] User logged out.
+2020-09-28 12:03:16.982 -07:00 [Information] User logged in.
+2020-09-28 12:03:42.861 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:42.905 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:42.906 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:42.907 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:03:42.979 -07:00 [Information] Application Starting up
+2020-09-28 12:04:31.589 -07:00 [Information] User logged out.
+2020-09-28 12:10:20.659 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:10:20.703 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:10:20.704 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:10:20.705 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:10:20.786 -07:00 [Information] Application Starting up
+2020-09-28 12:11:06.704 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:11:06.754 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:11:06.756 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:11:06.756 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:11:06.841 -07:00 [Information] Application Starting up
+2020-09-28 12:11:18.287 -07:00 [Information] User logged in.
+2020-09-28 12:12:31.881 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:12:31.935 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:12:31.936 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:12:31.937 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:12:32.020 -07:00 [Information] Application Starting up
+2020-09-28 12:12:38.235 -07:00 [Information] User logged out.
+2020-09-28 12:12:38.280 -07:00 [Error] The view '"index"' was not found. Searched locations: ["/Areas/Admin/Views/Account/index.cshtml", "/Areas/Admin/Views/Shared/index.cshtml", "/Views/Shared/index.cshtml", "/Pages/Shared/index.cshtml"]
+2020-09-28 12:12:38.290 -07:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'index' was not found. The following locations were searched:
+/Areas/Admin/Views/Account/index.cshtml
+/Areas/Admin/Views/Shared/index.cshtml
+/Views/Shared/index.cshtml
+/Pages/Shared/index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-28 12:13:23.477 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:13:23.529 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:13:23.530 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:13:23.531 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:13:23.627 -07:00 [Information] Application Starting up
+2020-09-28 12:13:27.332 -07:00 [Information] User logged out.
+2020-09-28 12:14:29.561 -07:00 [Information] User logged in.
+2020-09-28 12:18:28.734 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:18:28.773 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:18:28.774 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:18:28.775 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 12:18:28.847 -07:00 [Information] Application Starting up
+2020-09-28 12:18:33.235 -07:00 [Information] User logged out.

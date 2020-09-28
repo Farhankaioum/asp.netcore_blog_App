@@ -76,10 +76,19 @@ namespace ksp.blog.web.Areas.Admin.Controllers
             if (result.Succeeded)
             {
                 _logger.LogInformation("User logged in.");
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("index", "home");
             }
 
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> LogOut()
+        {
+             await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+
+            return RedirectToAction("index", "home");
         }
     }
 }
