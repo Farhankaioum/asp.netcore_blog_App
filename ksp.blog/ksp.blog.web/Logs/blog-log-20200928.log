@@ -161,3 +161,13 @@ System.InvalidOperationException: The following sections have been defined but h
 2020-09-28 14:39:07.803 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
 2020-09-28 14:39:07.908 -07:00 [Information] Application Starting up
 2020-09-28 14:39:20.524 -07:00 [Information] User logged in.
+2020-09-28 15:29:25.710 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:29:25.757 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:29:25.759 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:29:25.760 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:29:25.852 -07:00 [Information] Application Starting up
+2020-09-28 15:34:05.392 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:34:05.433 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:34:05.434 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:34:05.435 -07:00 [Warning] Role null validation failed: "DuplicateRoleName".
+2020-09-28 15:34:05.511 -07:00 [Information] Application Starting up
