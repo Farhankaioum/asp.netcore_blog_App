@@ -215,3 +215,4 @@ H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\bin\Debug\ne
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\bin\Debug\netcoreapp3.1\MimeKit.dll
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Account\ResetPassword.cshtml.g.cs
+H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Account\Edit.cshtml.g.cs

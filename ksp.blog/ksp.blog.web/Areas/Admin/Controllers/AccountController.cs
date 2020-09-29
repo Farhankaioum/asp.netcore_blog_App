@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using ksp.blog.membership;
 using ksp.blog.membership.Services;
 using ksp.blog.web.Areas.Admin.Models.Account;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
 namespace ksp.blog.web.Areas.Admin.Controllers
@@ -21,18 +19,21 @@ namespace ksp.blog.web.Areas.Admin.Controllers
         private readonly RoleManager _roleManager;
         private readonly ILogger<AccountController> _logger;
         private readonly IMailService _mailService;
+        private readonly IWebHostEnvironment _hostingEnvironment;
 
         public AccountController(SignInManager signInManager,
             UserManager userManager,
             RoleManager roleManager,
             ILogger<AccountController> logger,
-            IMailService mailService)
+            IMailService mailService,
+            IWebHostEnvironment hostingEnvironment)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _roleManager = roleManager;
             _logger = logger;
             _mailService = mailService;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         public IActionResult Index()
@@ -65,6 +66,64 @@ namespace ksp.blog.web.Areas.Admin.Controllers
             }
 
             model = new CreateAccountViewModel();
+
+            return View(model);
+        }
+
+        // Edit user account information
+        [HttpGet]
+        public IActionResult Edit(string userId)
+        {
+            var existingUser = _userManager.FindByIdAsync(userId);
+
+            var user = existingUser.Result;
+
+            if (existingUser == null)
+            {
+                return NotFound();
+            }
+
+            var userModel = new EditUserViewModel
+            {
+               UserName = user.UserName,
+               FullName = user.FullName,
+               Email = user.Email,
+               PhoneNumber = user.PhoneNumber,
+               ExistingPhotoPath = user.ImageUrl
+            };
+
+            return View(userModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(EditUserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var existingUser = _userManager.FindByIdAsync(model.UserId);
+                var user = existingUser.Result;
+
+                user.UserName = model.UserName;
+                user.Email = model.Email;
+                user.FullName = model.FullName;
+                user.PhoneNumber = model.PhoneNumber;
+
+                if (model.File != null)
+                {
+                    if (model.ExistingPhotoPath != null)
+                    {
+                        string filePath = Path.Combine(_hostingEnvironment.WebRootPath, "images/userProfileImages", model.ExistingPhotoPath);
+                        System.IO.File.Delete(filePath);
+                    }
+
+                    user.ImageUrl = ProcessUploadFile(model);
+                }
+
+                await _userManager.UpdateAsync(user);
+
+                return RedirectToAction("Index", "Home");
+
+            }
 
             return View(model);
         }
@@ -164,5 +223,22 @@ namespace ksp.blog.web.Areas.Admin.Controllers
         }
 
 
+        // Processing file
+        private string ProcessUploadFile(FileUploadBaseModel model)
+        {
+            string uniqueFilename = null;
+            if (model.File != null)
+            {
+                string uploadFolder = Path.Combine(_hostingEnvironment.WebRootPath, "images/userProfileImages");
+                uniqueFilename = Guid.NewGuid().ToString() + "_" + model.File.FileName;
+                string filePath = Path.Combine(uploadFolder, uniqueFilename);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.File.CopyTo(fileStream);
+                }
+
+            }
+            return uniqueFilename;
+        }
     }
 }
