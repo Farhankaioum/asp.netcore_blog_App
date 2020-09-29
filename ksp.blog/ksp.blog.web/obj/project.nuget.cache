@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MEzqGM47D7WO8foH6RWAlfVMQNZLhxOjGRBgpWFYQ/oVvXMDaPoi5lW9AedPM9nQvs83pyO1M1m/2+ttXzAxPw==",
+  "dgSpecHash": "Tsys3xOyE4CYM7lv3Zxo0hqAJzpT/OOvp3KT9S6hSqo6/jnXKGhNtDqn88iyZ22zeMHsdiu1wtD5x6iBrWs1/A==",
   "success": true,
   "projectFilePath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.web\\ksp.blog.web.csproj",
   "expectedPackageFiles": [
@@ -139,6 +139,7 @@
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.linq.dynamic.core\\1.2.2\\system.linq.dynamic.core.1.2.2.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Farhan Ahmed\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",

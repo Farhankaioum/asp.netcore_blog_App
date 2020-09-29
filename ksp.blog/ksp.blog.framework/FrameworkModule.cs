@@ -21,6 +21,15 @@ namespace ksp.blog.framework
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<CategoryRepository>().As<ICategoryRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogUnitOfWork>().As<IBlogUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CategoryService>().As<ICategoryService>()
+                .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }

@@ -2,7 +2,6 @@ using System;
 using System.Threading.Tasks;
 using Autofac.Extensions.DependencyInjection;
 using ksp.blog.membership.Contexts;
-using ksp.blog.membership.Entities;
 using ksp.blog.membership.Services;
 using ksp.blog.web.Seeder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +15,8 @@ namespace ksp.blog.web
     {
         public static async Task Main(string[] args)
         {
+            var host = CreateHostBuilder(args).Build();
+
             Log.Logger = new LoggerConfiguration()
                         .MinimumLevel.Debug()
                         .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
@@ -23,7 +24,6 @@ namespace ksp.blog.web
                         .WriteTo.RollingFile("Logs//blog-log-{Date}.log")
                         .CreateLogger();
 
-            var host = CreateHostBuilder(args).Build();
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -34,27 +34,21 @@ namespace ksp.blog.web
                     var roleManager = services.GetRequiredService<RoleManager>();
                     await ContextSeed.SeedRolesAsync(userManager, roleManager);
                     await ContextSeed.SeedSuperAdminAsync(userManager, roleManager);
+
+                    Log.Information("Application Starting up");
+
+                   // CreateHostBuilder(args).Build().Run();
                 }
                 catch (Exception ex)
                 {
-                    Log.Fatal(ex, "An error occurred seeding the DB."); 
+                    Log.Fatal(ex, "An error occurred seeding the DB.");
                 }
-            }
-                
-            try
-            {
-                Log.Information("Application Starting up");
-                CreateHostBuilder(args).Build().Run();
 
-            }
-            catch (Exception ex)
-            {
-                Log.Fatal(ex, "Application start-up failed");
-            }
-            finally
-            {
-                Log.CloseAndFlush();
-                host.Run();
+                finally
+                {
+                    Log.CloseAndFlush();
+                    host.Run();
+                }
             }
 
         }

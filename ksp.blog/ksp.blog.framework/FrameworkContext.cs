@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ksp.blog.framework.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace ksp.blog.framework
 {
@@ -30,5 +31,7 @@ namespace ksp.blog.framework
         {
             base.OnModelCreating(builder);
         }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }
