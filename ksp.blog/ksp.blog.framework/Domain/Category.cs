@@ -9,5 +9,7 @@ namespace ksp.blog.framework.Domain
     {
         public string Name { get; set; }
         public int Id { get; set; }
+
+        public List<BlogCategory> BlogCategories { get; set; }
     }
 }

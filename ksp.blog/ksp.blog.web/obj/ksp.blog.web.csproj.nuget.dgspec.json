@@ -95,6 +95,9 @@
             "projectReferences": {
               "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.data\\ksp.blog.data.csproj": {
                 "projectPath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.data\\ksp.blog.data.csproj"
+              },
+              "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.membership\\ksp.blog.membership.csproj": {
+                "projectPath": "H:\\Mosh_H(Advanced)\\Blog\\asp.netcore_blog_App\\ksp.blog\\ksp.blog.membership\\ksp.blog.membership.csproj"
               }
             }
           }
@@ -218,9 +221,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ksp.blog.framework;
 
 namespace ksp.blog.web.Migrations.Framework
 {
     [DbContext(typeof(FrameworkContext))]
-    partial class FrameworkContextModelSnapshot : ModelSnapshot
+    [Migration("20200930053853_BlogTableAdded")]
+    partial class BlogTableAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,21 +50,6 @@ namespace ksp.blog.web.Migrations.Framework
                     b.ToTable("Blogs");
                 });
 
-            modelBuilder.Entity("ksp.blog.framework.Domain.BlogCategory", b =>
-                {
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("BlogId", "CategoryId");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("BlogCategory");
-                });
-
             modelBuilder.Entity("ksp.blog.framework.Domain.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -76,21 +63,6 @@ namespace ksp.blog.web.Migrations.Framework
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("ksp.blog.framework.Domain.BlogCategory", b =>
-                {
-                    b.HasOne("ksp.blog.framework.Domain.Blog", "Blog")
-                        .WithMany("BlogCategories")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ksp.blog.framework.Domain.Category", "Category")
-                        .WithMany("BlogCategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
