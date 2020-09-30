@@ -8,5 +8,6 @@ namespace ksp.blog.framework
     public interface IBlogUnitOfWork : IUnitOfWork
     {
         ICategoryRepository CategoryRepository { get; set; }
+        IBlogRepository BlogRepository { get; set; }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using ksp.blog.data;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ksp.blog.framework
 {
@@ -9,12 +6,17 @@ namespace ksp.blog.framework
     {
         public BlogUnitOfWork(
             FrameworkContext dbContext,
-            ICategoryRepository categoryRepository)
+            ICategoryRepository categoryRepository,
+            IBlogRepository blogRepository)
                 : base(dbContext)
         {
             CategoryRepository = categoryRepository;
+            BlogRepository = blogRepository;
         }
 
+      
+
         public ICategoryRepository CategoryRepository { get ; set; }
+        public IBlogRepository BlogRepository { get; set; }
     }
 }

@@ -63,5 +63,6 @@ namespace ksp.blog.framework
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogCategory> BlogCategories { get; set; }
     }
 }

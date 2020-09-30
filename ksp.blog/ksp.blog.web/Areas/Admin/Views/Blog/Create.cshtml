@@ -1,0 +1,41 @@
+﻿@model BlogAddViewModel
+
+@{
+    ViewData["Title"] = "Blog create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add new Blog</h2>
+
+@*<partial name="_ActionMessage" model="@Model.Response" />*@
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" asp-area="Admin" asp-controller="Blog" asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select multiple="multiple" asp-for="CategoryIds" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+                    <option value="">Please select one</option>
+                </select>
+                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+
+        </form>
+    </div>
+</div>

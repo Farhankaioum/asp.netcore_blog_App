@@ -30,6 +30,12 @@ namespace ksp.blog.framework
             builder.RegisterType<CategoryService>().As<ICategoryService>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<BlogRepository>().As<IBlogRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogService>().As<IBlogService>()
+                .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }
