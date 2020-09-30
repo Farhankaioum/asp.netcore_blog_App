@@ -72,6 +72,12 @@ namespace ksp.blog.web
              .AddRoleManager<RoleManager>()
              .AddSignInManager<SignInManager>();
 
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
@@ -97,7 +103,9 @@ namespace ksp.blog.web
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
 
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
             services.AddRazorPages();
+
             services.AddOptions();
         }
 
@@ -122,6 +130,8 @@ namespace ksp.blog.web
             app.UseCookiePolicy();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

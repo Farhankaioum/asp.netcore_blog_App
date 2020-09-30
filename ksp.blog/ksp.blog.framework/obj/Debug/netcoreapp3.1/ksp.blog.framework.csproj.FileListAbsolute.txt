@@ -6,7 +6,6 @@ H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\bin\De
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.csprojAssemblyReference.cache
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.AssemblyInfoInputs.cache
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.AssemblyInfo.cs
-H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.csproj.CoreCompileInputs.cache
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.csproj.CopyComplete
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.dll
 H:\Mosh_H(Advanced)\Blog\asp.netcore_blog_App\ksp.blog\ksp.blog.framework\obj\Debug\netcoreapp3.1\ksp.blog.framework.pdb
