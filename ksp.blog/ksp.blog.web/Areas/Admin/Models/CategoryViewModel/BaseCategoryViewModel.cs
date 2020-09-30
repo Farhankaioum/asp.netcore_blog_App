@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ksp.blog.web.Areas.Admin.Models.CategoryViewModel
 {
-    public class BaseCategoryViewModel
+    public class BaseCategoryViewModel : AdminBaseModel
     {
         protected readonly ICategoryService _categoryService;
 

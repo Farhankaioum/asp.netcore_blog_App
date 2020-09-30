@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ksp.blog.web.Areas.Admin.Models;
 using ksp.blog.web.Areas.Admin.Models.CategoryViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -41,12 +39,16 @@ namespace ksp.blog.web.Areas.Admin.Controllers
             {
                 model.CreateCategory();
 
+                model.Response = new ResponseModel("Category creating successfull", ResponseType.Success);
+
                 _logger.LogInformation("Category created");
 
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
             {
+                model.Response = new ResponseModel("Category creating failed", ResponseType.Failure);
+
                 _logger.LogError(ex + " Error occured");
             }
 

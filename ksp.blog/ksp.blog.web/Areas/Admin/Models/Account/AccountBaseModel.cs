@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ksp.blog.web.Areas.Admin.Models.Account
 {
-    public class AccountBaseModel : IDisposable
+    public class AccountBaseModel : AdminBaseModel, IDisposable
     {
         protected readonly IMembershipService _membershipService;
 
