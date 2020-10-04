@@ -43,7 +43,7 @@ namespace ksp.blog.web
 
             builder.RegisterModule(new FrameworkModule(connectionString, migrationAssemblyName));
             builder.RegisterModule(new MembershipModule(connectionString, migrationAssemblyName));
-            //builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
+            builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
 
         }
         #endregion

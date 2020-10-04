@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Autofac;
 using ksp.blog.web.Areas.Admin.Models;
 using ksp.blog.web.Areas.Admin.Models.BlogViewModel;
+using ksp.blog.web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -22,7 +24,8 @@ namespace ksp.blog.web.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var model = Startup.AutofacContainer.Resolve<BlogIndexViewModel>();
+            return View(model);
         }
 
         [HttpGet]
@@ -53,7 +56,17 @@ namespace ksp.blog.web.Areas.Admin.Controllers
                 _logger.LogError(ex, "An error occure when insert the blog");
             }
 
+
+            model.LoadCategories();
             return View(model);
+        }
+
+        public IActionResult GetBlogs()
+        {
+            var tableModel = new DataTablesAjaxRequestModel(Request);
+            var model = Startup.AutofacContainer.Resolve<BlogIndexViewModel>();
+            var data = model.GetBlogs(tableModel);
+            return Json(data);
         }
 
     }

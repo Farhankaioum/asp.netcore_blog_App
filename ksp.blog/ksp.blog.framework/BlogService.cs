@@ -18,12 +18,17 @@ namespace ksp.blog.framework
 
         public (IList<Blog> records, int total, int totalDisplay) GetBlogs(int pageIndex, int pageSize, string searchText, string sortText)
         {
-            throw new NotImplementedException();
+           var result = _blogUnitOfWork.BlogRepository.Get(s => s.Title.Contains(searchText) || s.Description.Contains(searchText),
+                s => s.OrderBy(p => p.Title),
+                pageIndex: pageIndex, pageSize: pageSize);
+
+            return (result.data, result.total, result.totalDisplay);
+
         }
 
         public Blog GetBlog(int id)
         {
-            throw new NotImplementedException();
+            return _blogUnitOfWork.BlogRepository.GetById(id);
         }
 
         public void CreateBlog(Blog blog, List<int> categorisId)
