@@ -31,6 +31,17 @@ namespace ksp.blog.framework
             return _blogUnitOfWork.BlogRepository.GetById(id);
         }
 
+        // Obsolate
+        public Blog GetBlogWithNavigationProperty(int id)
+        {
+            return _blogUnitOfWork.BlogRepository.FindBlogWithProperties(id);
+        }
+
+        public List<int> GetBlogCategoriesId(int id)
+        {
+            return _blogUnitOfWork.BlogRepository.BlogCategoriesIds(id);
+        }
+
         public void CreateBlog(Blog blog, List<int> categorisId)
         {
             var duplicateCheck = IsDuplicateTitle(blog.Title);
@@ -42,21 +53,12 @@ namespace ksp.blog.framework
 
             _blogUnitOfWork.BlogRepository.Add(blog);
 
-            for (int i = 0; i < categorisId.Count; i++)
-            {
-                var blogCategory = new BlogCategory
-                {
-                    Blog = blog,
-                    CategoryId = categorisId[i]
-                };
-
-                _blogUnitOfWork.BlogRepository.AddBlogCategories(blogCategory);
-            }
+            CategoriesAdd(categorisId, blog);
 
             _blogUnitOfWork.Save();
         }
 
-        public void EditBlog(Blog blog)
+        public void EditBlog(Blog blog, List<int> categorisId)
         {
             var duplicateCheckByTitle = IsDuplicateTitle(blog.Title);
             var duplicateCheckById = _blogUnitOfWork.BlogRepository.GetCount(b => b.Id != blog.Id);
@@ -66,18 +68,24 @@ namespace ksp.blog.framework
                 throw new DuplicationException("Title already exists.", nameof(blog.Title));
             }
 
-            //var existingBlog = _blogUnitOfWork.BlogRepository.GetById(blog.Id);
-            //existingBlog.Title = blog.Title;
-            //existingBlog.Description = blog.Description;
+            var existingBlog = _blogUnitOfWork.BlogRepository.GetById(blog.Id);
+            existingBlog.Title = blog.Title;
+            existingBlog.Description = blog.Description;
 
-            _blogUnitOfWork.BlogRepository.Edit(blog);
+            EditCategoriesForBlog(categorisId, existingBlog);
+
             _blogUnitOfWork.Save();
             
         }
 
         public Blog DeleteBlog(int id)
         {
-            throw new NotImplementedException();
+            var existingBlog = _blogUnitOfWork.BlogRepository.GetById(id);
+
+             _blogUnitOfWork.BlogRepository.Remove(existingBlog);
+            _blogUnitOfWork.Save();
+
+            return existingBlog;
         }
 
         public void Dispose()
@@ -88,6 +96,33 @@ namespace ksp.blog.framework
         public List<Category> GetCategories()
         {
             return _blogUnitOfWork.CategoryRepository.GetAll().ToList();
+        }
+
+        public List<int> BlogCategoriesId(int blogId)
+        {
+            return new List<int>();
+        }
+
+        private void CategoriesAdd(List<int> categoriesId, Blog blog)
+        {
+            for (int i = 0; i < categoriesId.Count; i++)
+            {
+                    var blogCategory = new BlogCategory
+                    {
+                        Blog = blog,
+                        CategoryId = categoriesId[i]
+                    };
+
+                    _blogUnitOfWork.BlogRepository.AddBlogCategories(blogCategory);  
+            }
+        }
+
+        private void EditCategoriesForBlog(List<int> categoriesId, Blog blog)
+        {
+            blog.BlogCategories.RemoveAll(c => c.BlogId == blog.Id);
+            _blogUnitOfWork.Save();
+
+            CategoriesAdd(categoriesId, blog);
         }
 
         private bool IsDuplicateTitle(string title)

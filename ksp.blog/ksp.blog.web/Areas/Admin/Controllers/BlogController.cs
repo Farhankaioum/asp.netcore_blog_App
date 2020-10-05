@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using Autofac;
 using ksp.blog.web.Areas.Admin.Models;
 using ksp.blog.web.Areas.Admin.Models.BlogViewModel;
@@ -48,7 +45,7 @@ namespace ksp.blog.web.Areas.Admin.Controllers
 
                 model.Response = new ResponseModel("Blog creation successfull!", ResponseType.Success);
 
-                return RedirectToAction("Index", "Category");
+                return RedirectToAction("Index", "Blog");
             }
             catch (Exception ex)
             {
@@ -59,6 +56,57 @@ namespace ksp.blog.web.Areas.Admin.Controllers
 
             model.LoadCategories();
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var model = new BlogEditViewModel();
+            model.LoadBlog(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(BlogEditViewModel model)
+        {
+            try
+            {
+
+                model.EditBlog();
+
+                model.Response = new ResponseModel("Blog edit successfull!", ResponseType.Success);
+
+                return RedirectToAction("Index", "Blog");
+            }
+            catch (Exception ex)
+            {
+                model.Response = new ResponseModel("Blog edit failed!", ResponseType.Failure);
+                _logger.LogError(ex, "An error occure when insert the blog");
+            }
+
+            
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var model = new BlogDeleteViewModel();
+            try
+            {
+                var title = model.DeleteBlog(id);
+                model.Response = new ResponseModel($"Blog {title} successfully deleted.", ResponseType.Success);
+                return RedirectToAction("Index", "Blog");
+            }
+            catch (Exception ex)
+            {
+                model.Response = new ResponseModel($"Blog delete failed.", ResponseType.Failure);
+                _logger.LogError(ex, "An error occured when deleted the book");
+            }
+
+            return RedirectToAction("Index", "Blog");
+
         }
 
         public IActionResult GetBlogs()

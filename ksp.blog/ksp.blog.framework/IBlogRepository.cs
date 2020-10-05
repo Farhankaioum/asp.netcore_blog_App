@@ -9,5 +9,7 @@ namespace ksp.blog.framework
     public interface IBlogRepository : IRepository<Blog, int, FrameworkContext>
     {
         void AddBlogCategories(BlogCategory blogCategory);
+        Blog FindBlogWithProperties(int id);
+        List<int> BlogCategoriesIds(int blogId);
     }
 }
